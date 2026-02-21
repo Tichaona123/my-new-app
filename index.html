@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 24th Birthday, Tichaona!</title>
+  <meta name="description" content="A cinematic birthday celebration for Tichaona Mutomba's 24th birthday." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- FLOATING EMOJIS BACKGROUND -->
+  <div class="floating-emojis" id="floatingEmojis"></div>
+
+  <!-- INTRO SCREEN -->
+  <div id="intro" class="intro">
+    <canvas id="starsCanvas"></canvas>
+    <div class="intro-content">
+      <div class="intro-badge" id="introBadge">
+        <span class="badge-dot"></span>
+        FEBRUARY 22, 2026
+      </div>
+      <h1 class="intro-title">
+        <span class="intro-line-sm reveal-text" data-delay="0">Happy</span>
+        <span class="intro-line-lg reveal-text" data-delay="200">24<sup>th</sup></span>
+        <span class="intro-line-sm reveal-text" data-delay="400">Birthday</span>
+      </h1>
+      <p class="intro-name reveal-text" data-delay="600">Tichaona Mutomba</p>
+      <div class="intro-divider reveal-text" data-delay="700"></div>
+      <p class="intro-quote reveal-text" data-delay="800">"The best is yet to come."</p>
+      <button id="enterBtn" class="enter-btn reveal-text" data-delay="1000">
+        <span>Open Your Gift</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- MAIN EXPERIENCE -->
+  <main id="mainContent" class="main-content hidden">
+
+    <!-- SECTION 1: HERO + LIVE AGE COUNTER -->
+    <section class="section hero-section" id="hero">
+      <canvas id="heroParticles"></canvas>
+      <div class="hero-inner">
+        <div class="hero-number">24</div>
+        <h2 class="hero-headline anim-item">The year everything <em>levels up.</em></h2>
+        <p class="hero-sub anim-item">This isn't just a birthday. It's the opening chapter of the most extraordinary
+          season of your life.</p>
+
+        <!-- LIVE AGE COUNTER -->
+        <div class="age-counter anim-item" id="ageCounter">
+          <div class="age-unit">
+            <span class="age-value" id="ageYears">24</span>
+            <span class="age-label">Years</span>
+          </div>
+          <div class="age-separator">:</div>
+          <div class="age-unit">
+            <span class="age-value" id="ageMonths">0</span>
+            <span class="age-label">Months</span>
+          </div>
+          <div class="age-separator">:</div>
+          <div class="age-unit">
+            <span class="age-value" id="ageDays">0</span>
+            <span class="age-label">Days</span>
+          </div>
+          <div class="age-separator">:</div>
+          <div class="age-unit">
+            <span class="age-value" id="ageHours">0</span>
+            <span class="age-label">Hours</span>
+          </div>
+          <div class="age-separator">:</div>
+          <div class="age-unit">
+            <span class="age-value" id="ageMins">0</span>
+            <span class="age-label">Mins</span>
+          </div>
+          <div class="age-separator">:</div>
+          <div class="age-unit">
+            <span class="age-value" id="ageSecs">0</span>
+            <span class="age-label">Secs</span>
+          </div>
+        </div>
+        <p class="age-caption anim-item">You've been amazing for exactly this long (and counting)</p>
+
+        <div class="scroll-cue anim-item">
+          <span>Scroll to unwrap</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE LETTER (Typewriter Effect) -->
+    <section class="section letter-section" id="letter">
+      <div class="letter-card" id="letterCard">
+        <div class="letter-seal">T</div>
+        <div class="letter-body" id="letterBody">
+          <!-- Typewriter content injected by JS -->
+        </div>
+        <div class="letter-envelope" id="letterEnvelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <p>📩 <em>A letter for you</em></p>
+            <p class="envelope-hint">Click to open</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FUN FACTS -->
+    <section class="section facts-section" id="facts">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">Fun <span class="highlight">Birthday Facts</span></h2>
+        <p class="section-sub anim-item">The day you were born was already legendary</p>
+      </div>
+      <div class="facts-grid" id="factsGrid"></div>
+    </section>
+
+    <!-- SECTION 4: 24 THINGS -->
+    <section class="section things-section" id="things">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">24 Reasons You're <span class="highlight">Exceptional</span></h2>
+        <p class="section-sub anim-item">One for every year of brilliance</p>
+      </div>
+      <div class="things-grid" id="thingsGrid"></div>
+    </section>
+
+    <!-- SECTION 5: TIMELINE -->
+    <section class="section timeline-section" id="timeline">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">Your Story <span class="highlight">So Far</span></h2>
+        <p class="section-sub anim-item">Every great legend has defining chapters</p>
+      </div>
+      <div class="timeline" id="timeline-track"></div>
+    </section>
+
+    <!-- SECTION 6: WISH CAPSULES -->
+    <section class="section wishes-section" id="wishes">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">Birthday <span class="highlight">Wish Capsules</span></h2>
+        <p class="section-sub anim-item">Click each capsule to reveal your blessings for year 24</p>
+        <div class="capsule-progress anim-item">
+          <span id="capsuleCount">0</span> / <span id="capsuleTotal">8</span> opened
+          <div class="capsule-progress-bar">
+            <div class="capsule-progress-fill" id="capsuleProgressFill"></div>
+          </div>
+        </div>
+      </div>
+      <div class="capsules-grid" id="capsulesGrid"></div>
+    </section>
+
+    <!-- SECTION 7: VISION BOARD -->
+    <section class="section vision-section" id="vision">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">Season 24 <span class="highlight">Vision Board</span></h2>
+        <p class="section-sub anim-item">What this year holds for you</p>
+      </div>
+      <div class="vision-grid" id="visionGrid"></div>
+    </section>
+
+    <!-- SECTION 8: BIRTHDAY PLAYLIST -->
+    <section class="section playlist-section" id="playlist">
+      <div class="section-header">
+        <h2 class="section-heading anim-item">Your Birthday <span class="highlight">Anthem</span></h2>
+        <p class="section-sub anim-item">Every great season needs a soundtrack</p>
+      </div>
+      <div class="soundboard" id="soundboard">
+        <div class="soundboard-instructions anim-item">Tap the pads to create your birthday beat 🎵</div>
+        <div class="pads-grid" id="padsGrid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: FINALE -->
+    <section class="section finale-section" id="finale">
+      <canvas id="finaleCanvas"></canvas>
+
+      <!-- Floating hearts & stars background -->
+      <div class="finale-floaters" id="finaleFloaters"></div>
+
+      <!-- Sparkle ring decoration -->
+      <div class="sparkle-ring" id="sparkleRing"></div>
+
+      <div class="finale-content" id="finaleContent">
+        <!-- Midnight Countdown -->
+        <div class="midnight-countdown" id="midnightCountdown">
+          <div class="countdown-label">🕛 You officially turn 24 in</div>
+          <div class="countdown-timer" id="countdownTimer">
+            <div class="cd-unit"><span class="cd-val" id="cdHours">00</span><span class="cd-lbl">hrs</span></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-unit"><span class="cd-val" id="cdMins">00</span><span class="cd-lbl">min</span></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-unit"><span class="cd-val" id="cdSecs">00</span><span class="cd-lbl">sec</span></div>
+          </div>
+        </div>
+
+        <!-- Already 24 message (shown after midnight) -->
+        <div class="already-24 hidden" id="already24">
+          <div class="crown-emoji">👑</div>
+          <div class="officially-text">You're officially</div>
+          <div class="age-big">24</div>
+        </div>
+
+        <div class="finale-candles" id="finaleCandles"></div>
+
+        <div class="finale-deco-top">✦ ─── ⋆⋅☆⋅⋆ ─── ✦</div>
+
+        <h2 class="finale-title">
+          <span>Happy Birthday,</span>
+          <span class="finale-name">Tichaona</span>
+        </h2>
+
+        <div class="finale-subtitle">🎂 The birthday boy has arrived 🎂</div>
+
+        <p class="finale-message">May year 24 bring you everything your heart desires — and all the things you haven't
+          even imagined yet.</p>
+
+        <!-- Cake with candles -->
+        <div class="finale-cake" id="finaleCake">
+          <div class="cake-glow"></div>
+          <div class="cake-body">
+            <div class="cake-topper">🎂</div>
+            <div class="cake-layer top"></div>
+            <div class="cake-layer mid"></div>
+            <div class="cake-layer bottom"></div>
+            <div class="cake-candle-row" id="cakeCandles"></div>
+          </div>
+          <p class="cake-hint" id="cakeHint">Click the cake to blow out the candles 🎂</p>
+        </div>
+
+        <!-- Post-blow celebration (hidden initially) -->
+        <div class="post-blow hidden" id="postBlow">
+          <div class="wish-granted">🌟 Wish Granted! 🌟</div>
+          <p class="post-blow-text">Whatever you just wished for... it's already on its way. ✨</p>
+          <div class="post-blow-emojis">🎉🥳🎊🎁🎈🪅🎆🎇</div>
+        </div>
+
+        <!-- Birthday wishes ticker -->
+        <div class="wishes-ticker" id="wishesTicker">
+          <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+
+        <!-- Cute decorative quotes -->
+        <div class="finale-quotes">
+          <p class="fq">💜 "Age is just a number — but 24 looks really good on you." 💜</p>
+        </div>
+
+        <div class="finale-deco-bottom">✦ ─── ⋆⋅☆⋅⋆ ─── ✦</div>
+
+        <!-- SHARE BUTTON -->
+        <div class="share-section" id="shareSection">
+          <button class="share-btn" id="shareBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
+            Share this celebration
+          </button>
+          <p class="share-copied hidden" id="shareCopied">✅ Link copied!</p>
+        </div>
+
+        <div class="finale-footer">
+          <p>Made with ❤️ for the one and only Tichaona Mutomba</p>
+          <p class="finale-hearts">💛 💜 💛 💜 💛</p>
+          <p class="finale-year">© Season 24 — 2026</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- AUDIO TOGGLE -->
+  <button id="audioToggle" class="audio-toggle" title="Toggle Music">
+    <span class="audio-icon on">♫</span>
+    <span class="audio-icon off hidden">✕</span>
+  </button>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top hidden" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
