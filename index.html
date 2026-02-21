@@ -187,18 +187,12 @@
     <!-- SECTION 9: FINALE -->
     <section class="section finale-section" id="finale">
       <canvas id="finaleCanvas"></canvas>
-
-      <!-- Floating hearts & stars background -->
-      <div class="finale-floaters" id="finaleFloaters"></div>
-
-      <!-- Sparkle ring decoration -->
-      <div class="sparkle-ring" id="sparkleRing"></div>
-
       <div class="finale-content" id="finaleContent">
-        <!-- Midnight Countdown -->
+
+        <!-- Countdown to midnight -->
         <div class="midnight-countdown" id="midnightCountdown">
-          <div class="countdown-label">🕛 You officially turn 24 in</div>
-          <div class="countdown-timer" id="countdownTimer">
+          <p class="cd-label">🕛 you turn 24 in</p>
+          <div class="countdown-timer">
             <div class="cd-unit"><span class="cd-val" id="cdHours">00</span><span class="cd-lbl">hrs</span></div>
             <div class="cd-sep">:</div>
             <div class="cd-unit"><span class="cd-val" id="cdMins">00</span><span class="cd-lbl">min</span></div>
@@ -207,79 +201,46 @@
           </div>
         </div>
 
-        <!-- Already 24 message (shown after midnight) -->
+        <!-- After midnight -->
         <div class="already-24 hidden" id="already24">
           <div class="crown-emoji">👑</div>
-          <div class="officially-text">You're officially</div>
-          <div class="age-big">24</div>
+          <p class="officially-text">you're officially</p>
+          <p class="age-big">24</p>
         </div>
 
         <div class="finale-candles" id="finaleCandles"></div>
 
-        <div class="finale-deco-top">✦ ─── ⋆⋅☆⋅⋆ ─── ✦</div>
-
         <h2 class="finale-title">
-          <span>Happy Birthday,</span>
+          <span>happy birthday,</span>
           <span class="finale-name">Tichaona</span>
         </h2>
 
-        <div class="finale-subtitle">🎂 The birthday boy has arrived 🎂</div>
+        <p class="finale-message">may this year bring you everything your heart desires 💛</p>
 
-        <p class="finale-message">May year 24 bring you everything your heart desires — and all the things you haven't
-          even imagined yet.</p>
-
-        <!-- Cake with candles -->
         <div class="finale-cake" id="finaleCake">
-          <div class="cake-glow"></div>
           <div class="cake-body">
-            <div class="cake-topper">🎂</div>
             <div class="cake-layer top"></div>
             <div class="cake-layer mid"></div>
             <div class="cake-layer bottom"></div>
             <div class="cake-candle-row" id="cakeCandles"></div>
           </div>
-          <p class="cake-hint" id="cakeHint">Click the cake to blow out the candles 🎂</p>
+          <p class="cake-hint" id="cakeHint">tap to make a wish 🕯️</p>
         </div>
 
-        <!-- Post-blow celebration (hidden initially) -->
         <div class="post-blow hidden" id="postBlow">
-          <div class="wish-granted">🌟 Wish Granted! 🌟</div>
-          <p class="post-blow-text">Whatever you just wished for... it's already on its way. ✨</p>
-          <div class="post-blow-emojis">🎉🥳🎊🎁🎈🪅🎆🎇</div>
+          <p class="wish-text">✨ wish made ✨</p>
         </div>
 
-        <!-- Birthday wishes ticker -->
-        <div class="wishes-ticker" id="wishesTicker">
-          <div class="ticker-track" id="tickerTrack"></div>
-        </div>
-
-        <!-- Cute decorative quotes -->
-        <div class="finale-quotes">
-          <p class="fq">💜 "Age is just a number — but 24 looks really good on you." 💜</p>
-        </div>
-
-        <div class="finale-deco-bottom">✦ ─── ⋆⋅☆⋅⋆ ─── ✦</div>
-
-        <!-- SHARE BUTTON -->
-        <div class="share-section" id="shareSection">
-          <button class="share-btn" id="shareBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="18" cy="5" r="3" />
-              <circle cx="6" cy="12" r="3" />
-              <circle cx="18" cy="19" r="3" />
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
-            </svg>
-            Share this celebration
-          </button>
-          <p class="share-copied hidden" id="shareCopied">✅ Link copied!</p>
+        <div class="share-section">
+          <button class="share-btn" id="shareBtn">share 💌</button>
+          <p class="share-copied hidden" id="shareCopied">✅ copied!</p>
         </div>
 
         <div class="finale-footer">
-          <p>Made with ❤️ for the one and only Tichaona Mutomba</p>
-          <p class="finale-hearts">💛 💜 💛 💜 💛</p>
-          <p class="finale-year">© Season 24 — 2026</p>
+          <p>made with ❤️ for tichaona</p>
+          <p class="finale-hearts">💛💜💛</p>
         </div>
+
       </div>
     </section>
 

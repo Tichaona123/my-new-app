@@ -624,7 +624,6 @@ class BirthdayApp {
       this.setupCake();
       this.setupShare();
       this.setupMidnightCountdown();
-      this.setupFinaleExtras();
       startFloatingEmojis();
 
       // Hero particles
@@ -943,58 +942,7 @@ class BirthdayApp {
     }
   }
 
-  setupFinaleExtras() {
-    // Sparkle ring dots
-    const ring = document.getElementById('sparkleRing');
-    for (let i = 0; i < 12; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'sparkle-dot';
-      const angle = (360 / 12) * i;
-      const rad = angle * (Math.PI / 180);
-      dot.style.left = (50 + 50 * Math.cos(rad)) + '%';
-      dot.style.top = (50 + 50 * Math.sin(rad)) + '%';
-      ring.appendChild(dot);
-    }
 
-    // Floating hearts & stars in finale
-    const floaters = document.getElementById('finaleFloaters');
-    const heartEmojis = ['💜', '✨', '💛', '⭐', '💫', '🌟', '💕', '💖', '🤍'];
-    const spawnFloater = () => {
-      const el = document.createElement('div');
-      el.className = 'floater';
-      el.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-      el.style.left = Math.random() * 100 + '%';
-      el.style.bottom = '-20px';
-      el.style.fontSize = (Math.random() * 0.8 + 0.8) + 'rem';
-      el.style.animationDuration = (Math.random() * 8 + 8) + 's';
-      floaters.appendChild(el);
-      setTimeout(() => el.remove(), 16000);
-    };
-    setInterval(spawnFloater, 1800);
-    for (let i = 0; i < 5; i++) setTimeout(spawnFloater, i * 400);
-
-    // Wishes ticker
-    const tickerMsgs = [
-      '🎂 Happy 24th Birthday! 🎂',
-      '✨ You are one of a kind ✨',
-      '💜 Wishing you endless joy 💜',
-      '🌟 Your light shines so bright 🌟',
-      '🎉 Year 24 is YOUR year 🎉',
-      '👑 Crown on, world off 👑',
-      '💫 Believe in your magic 💫',
-      '🎈 Celebrate every moment 🎈',
-      '🚀 Sky is just the beginning 🚀',
-      '❤️ Loved and celebrated today ❤️',
-    ];
-    const track = document.getElementById('tickerTrack');
-    // Double the items for seamless loop
-    [...tickerMsgs, ...tickerMsgs].forEach(msg => {
-      const item = document.createElement('span');
-      item.className = 'ticker-item';
-      item.textContent = msg;
-      track.appendChild(item);
-    });
-  }
 
   setupShare() {
     document.getElementById('shareBtn').addEventListener('click', async () => {

@@ -302,7 +302,7 @@ body {
 .section {
   position: relative;
   min-height: 100vh;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -311,7 +311,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-heading {
@@ -1152,6 +1152,7 @@ body {
 .finale-section {
   background: radial-gradient(ellipse at 50% 50%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
   min-height: 100vh;
+  padding: 3rem 2rem;
 }
 
 #finaleCanvas {
@@ -1181,8 +1182,8 @@ body {
 .finale-candles {
   display: flex;
   justify-content: center;
-  gap: 0.25rem;
-  margin-bottom: 2rem;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
@@ -1218,8 +1219,8 @@ body {
 .finale-title {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 1.5rem;
+  gap: 0.15rem;
+  margin-bottom: 0.75rem;
 }
 
 .finale-title span:first-child {
@@ -1233,7 +1234,7 @@ body {
 
 .finale-name {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: 900;
   background: linear-gradient(135deg, var(--accent-bright), var(--warm), var(--rose));
   -webkit-background-clip: text;
@@ -1243,11 +1244,11 @@ body {
 }
 
 .finale-message {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-dim);
-  line-height: 1.7;
+  line-height: 1.5;
   max-width: 550px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
 }
 
 .finale-cake {
@@ -1337,7 +1338,7 @@ body {
 }
 
 .cake-hint {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 0.85rem;
   color: var(--text-muted);
   transition: opacity 0.5s;
@@ -1345,7 +1346,7 @@ body {
 
 /* Share */
 .share-section {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .share-btn {
@@ -1377,7 +1378,7 @@ body {
 }
 
 .finale-footer {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   font-size: 0.8rem;
   color: var(--text-muted);
   letter-spacing: 0.15em;
@@ -1401,8 +1402,8 @@ body {
   background: rgba(167, 139, 250, 0.08);
   border: 1px solid rgba(167, 139, 250, 0.15);
   border-radius: var(--radius);
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -1492,55 +1493,10 @@ body {
   line-height: 1;
 }
 
-/* Finale decorations */
-.finale-deco-top,
-.finale-deco-bottom {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  letter-spacing: 0.3em;
-  margin-bottom: 1.5rem;
-  opacity: 0.5;
-}
-
-.finale-deco-bottom {
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-
-.finale-subtitle {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--warm);
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  animation: softGlow 3s ease-in-out infinite;
-}
-
-/* Cake extras */
-.cake-glow {
-  position: absolute;
-  inset: -30px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.15), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: pulseGlow 3s ease-in-out infinite;
-  z-index: 0;
-}
-
-.cake-topper {
-  font-size: 1.5rem;
-  position: absolute;
-  top: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 6;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Post-blow celebration */
+/* Post-blow */
 .post-blow {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   animation: fadeInUp 1s ease;
 }
 
@@ -1548,110 +1504,21 @@ body {
   display: none;
 }
 
-.wish-granted {
+.wish-text {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.1rem;
   color: var(--warm);
-  margin-bottom: 0.5rem;
-  animation: shimmer 2s ease-in-out infinite;
+  font-style: italic;
 }
 
-.post-blow-text {
+.cd-label {
+  font-family: var(--font-serif);
   font-size: 1rem;
   color: var(--text-dim);
-  font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.post-blow-emojis {
-  font-size: 1.5rem;
-  letter-spacing: 0.5em;
-  animation: softBounce 2s ease-in-out infinite;
-}
-
-/* Birthday wishes ticker */
-.wishes-ticker {
-  width: 100%;
-  max-width: 600px;
-  overflow: hidden;
-  margin: 2rem auto;
-  padding: 0.75rem 0;
-  border-top: 1px solid rgba(167, 139, 250, 0.08);
-  border-bottom: 1px solid rgba(167, 139, 250, 0.08);
-}
-
-.ticker-track {
-  display: flex;
-  gap: 3rem;
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
-}
-
-.ticker-item {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
-/* Cute quotes */
-.finale-quotes {
-  margin-top: 2rem;
-}
-
-.fq {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 0.95rem;
-  color: var(--text-dim);
-  max-width: 450px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-/* Floating hearts & stars */
-.finale-floaters {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.floater {
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 0;
-  animation: floatSideways linear forwards;
-}
-
-/* Sparkle ring */
-.sparkle-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  border: 1px solid rgba(167, 139, 250, 0.06);
-  pointer-events: none;
-  z-index: 1;
-  animation: spinSlow 30s linear infinite;
-}
-
-.sparkle-dot {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 6px rgba(167, 139, 250, 0.5);
-}
-
-/* New finale animations */
+/* Finale animations */
 @keyframes heartPulse {
 
   0%,
@@ -1660,7 +1527,7 @@ body {
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -1668,115 +1535,11 @@ body {
 
   0%,
   100% {
-    transform: translateY(0) rotate(-5deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-}
-
-@keyframes softGlow {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.6;
-  }
-}
-
-@keyframes pulseGlow {
-
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(-8px);
-  }
-}
-
-@keyframes shimmer {
-
-  0%,
-  100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-
-  50% {
-    opacity: 0.8;
-    filter: brightness(1.3);
-  }
-}
-
-@keyframes softBounce {
-
-  0%,
-  100% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes floatSideways {
-  0% {
-    opacity: 0;
-    transform: translateY(100%) rotate(0deg);
-  }
-
-  15% {
-    opacity: 0.4;
-  }
-
-  85% {
-    opacity: 0.4;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-100%) rotate(180deg);
-  }
-}
-
-@keyframes spinSlow {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translateY(-8px);
   }
 }
 
